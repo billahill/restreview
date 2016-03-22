@@ -62,6 +62,7 @@ public class PersistenceConfig {
 		factory.setPackagesToScan("com.aerovip.project.entities");
 
 		Properties jpaProperties = new Properties();
+		jpaProperties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
 		jpaProperties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 		factory.setJpaProperties(jpaProperties);
 
